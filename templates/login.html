@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'login.css') }}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Login Page</h1>
+        <form method="POST">
+        <input type="text" name="uname", placeholder="Username" >
+        <br><br>
+        <input type="password", name="pwd", placeholder="Password">
+        <br><br>
+        <button>Log in</button>
+        </form>
+        <br>
+        <h3>Not signed in?</h3>
+        <a href="{{url_for('register')}}"><h3>Register Here</h3></a>
+        <h3>{{ msg }}</h3>
+    </div>
+</body>
+</html>
